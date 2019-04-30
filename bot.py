@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import telebot
 
-sys.setdefaultencoding('utf-8')
-
 TOKEN = "545763190:AAG2iUQDQVmxUjUzUnhLdATafnHcwkv0SJQ"
 bot = telebot.TeleBot(TOKEN)
 
