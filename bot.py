@@ -17,10 +17,10 @@ def hello(message):
     if name == "Bohdan":
         sent = bot.send_message(message.chat.id, name + ' , you are /|0X')
     else:
-        sent = bot.send_message(message.chat.id, 'Привет, ' + name + '. Рад тебя видеть.')
+        sent = bot.send_message(message.chat.id, 'Привіт, ' + name + '. Радий тебе бачити!')
 
 @bot.message_handler(func=lambda message: True, content_types=['photo', 'sticker'])
 def handle_images(message):
-	bot.send_message(message.chat.id, "Nahuy mnie tvoyi kartinki?!")
+	bot.send_message(message.chat.id, "Нахуй мені твої картинки?!")
 
 bot.polling()
