@@ -10,14 +10,19 @@ bot = telebot.TeleBot(TOKEN)
 def start(message):
     sent = bot.send_message(message.chat.id, 'Як тебе звати?')
     bot.register_next_step_handler(sent, hello)
-
-@bot.message_handler(func=lambda message: True, content_types=['text'])
+	
 def hello(message):
     name = message.text
     if name == "Bohdan":
         sent = bot.send_message(message.chat.id, name + ' , you are /|0X')
     else:
         sent = bot.send_message(message.chat.id, 'Привіт, ' + name + '. Радий тебе бачити!')
+
+@bot.message_handler(func=lambda message: True, content_types=['text'])
+def handle_text(message):
+    text = message.text
+    if name != "Bohdan":
+        bot.send_message(message.chat.id, 'Ти сказав(-ла) ' + text + ' ?')
 
 @bot.message_handler(func=lambda message: True, content_types=['photo', 'sticker'])
 def handle_images(message):
