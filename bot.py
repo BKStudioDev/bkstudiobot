@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
-import sys
 import telebot
-import logging
-
-logger = telebot.logger
-telebot.logger.setLevel(logging.DEBUG)
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
