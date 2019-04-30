@@ -8,7 +8,7 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 
 def start(message):
-    sent = bot.send_message(message.chat.id, 'Как тебя зовут?')
+    sent = bot.send_message(message.chat.id, 'Як тебе звати?')
     bot.register_next_step_handler(sent, hello)
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
